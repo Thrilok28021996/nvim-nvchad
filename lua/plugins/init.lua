@@ -29,4 +29,32 @@ return {
     },
   },
   -- Add other plugins here
+  -- Mason nvim
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "stylua",
+        "html-lsp",
+        "css-lsp",
+        "prettier",
+        "pylsp", -- Added python language server here
+      },
+    },
+  },
+  -- Tree sitter
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "python", -- Added python syntax highlighting here
+      },
+    },
+  },
 }
