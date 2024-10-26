@@ -12,26 +12,21 @@ return {
       require "configs.lspconfig"
     end,
   },
-
-  -- Add other plugins here
+  -- lazy.nvim
   {
     "folke/noice.nvim",
-    config = function()
-      require "configs.noice"
-    end,
-    requires = {
-      { "MunifTanjim/nui.nvim" },
-      {
-        "rcarriga/nvim-notify",
-        config = function()
-          require("notify").setup {
-            stages = "fade_in_slide_out",
-            timeout = 2000,
-            background_colour = "#000000",
-          }
-          vim.notify = require "notify"
-        end,
-      },
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
     },
   },
+  -- Add other plugins here
 }
