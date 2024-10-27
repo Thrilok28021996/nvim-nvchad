@@ -13,3 +13,5 @@ map("n", "<C-q>", "<cmd> q <CR>")
 --
 -- TO Delete a key use this
 -- vim.keymap.del('n', '<leader>th')
+--
+--
