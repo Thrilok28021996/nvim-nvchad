@@ -22,6 +22,10 @@ lspconfig.pylsp.setup {
         pylsp_mypy = { enabled = false },
         pylsp_black = { enabled = false },
         pylsp_isort = { enabled = false },
+        pylsp_pycodestyle = { enabled = false },
+        pylsp_pyflakes = { enabled = false },
+        pylsp_mccabe = { enabled = false },
+        -- , mccabe, and pyflakes
       },
     },
   },
